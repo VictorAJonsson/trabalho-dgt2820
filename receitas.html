@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="receitas.css" />
+    <title>Receitas</title>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <h1 class="page-title">Catálogo de Receitas</h1>
+      <div id="receitas" class="row g-4"></div>
+    </div>
+    <div id="modalReceita" class="modal-overlay">
+      <div class="modal-custom">
+        <img id="modalImagem" class="modal-img" />
+        <h2 id="modalTitulo"></h2>
+        <p id="modalDescricao"></p>
+        <h4>Ingredientes</h4>
+        <ul id="modalIngredientes"></ul>
+        <button id="btnFechar" class="btn btn-dark">Fechar</button>
+      </div>
+    </div>
+    <script src="receitas.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+body {
+  background-color: #f5f6f8;
+}
+
+.page-title {
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 2rem;
+}
+
+.receita-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.receita-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.receita-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #212529;
+}
+
+.card-text {
+  min-height: 70px;
+}
+
+.ingrediente-tag {
+  display: inline-block;
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #212529;
+  color: white;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.btn-dark {
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-custom {
+  width: 90%;
+  max-width: 650px;
+  background: white;
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  animation: modalFade 0.2s ease;
+}
+
+.modal-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+}
+
+.modal-custom h2 {
+  margin-bottom: 0.8rem;
+  color: #212529;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.modal-custom h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  color: #212529;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.modal-custom p {
+  color: #6c757d;
+}
+
+.modal-custom ul {
+  padding-left: 1.2rem;
+}
+
+.modal-custom li {
+  margin-bottom: 0.4rem;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
