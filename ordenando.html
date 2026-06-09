@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordenação de Números</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Ordenação de Números</h1>
+    <input type="number" id="numero" />
+    <button id="btnAdicionar">Adicionar</button>
+    <hr />
+    <p>
+      Lista:
+      <span id="listaNumeros"></span>
+    </p>
+    <fieldset>
+      <legend>Algoritmo de Ordenação</legend>
+      <label>
+        <input type="radio" name="algoritmo" value="bubble" checked />
+        Bubble Sort
+      </label>
+      <label>
+        <input type="radio" name="algoritmo" value="selection" />
+        Selection Sort
+      </label>
+      <label>
+        <input type="radio" name="algoritmo" value="quick" />
+        Quick Sort
+      </label>
+    </fieldset>
+    <br />
+    <button id="btnOrdenar">Ordenar</button>
+    <button id="btnMisturar">Misturar</button>
+    <script src="ordenando.js"></script>
+  </body>
+</html>
