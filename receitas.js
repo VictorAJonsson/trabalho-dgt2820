@@ -2,21 +2,21 @@ const receitas = [
   {
     titulo: "Lasanha",
     descricao: "Uma clássica lasanha italiana com molho e queijo.",
-    imagem: "https://picsum.photos/400/250?1",
+    imagem: "./imagens/lasanha.jpg",
     ingredientes: ["Massa", "Queijo", "Molho de tomate"],
   },
 
   {
     titulo: "Bolo de Chocolate",
     descricao: "Bolo fofinho com cobertura de chocolate.",
-    imagem: "https://picsum.photos/400/250?2",
+    imagem: "./imagens/bolo-chocolate.jpg",
     ingredientes: ["Farinha", "Chocolate", "Leite"],
   },
 
   {
     titulo: "Pizza",
     descricao: "Pizza tradicional com queijo e calabresa.",
-    imagem: "https://picsum.photos/400/250?3",
+    imagem: "./imagens/pizza.jpg",
     ingredientes: ["Massa", "Queijo", "Calabresa"],
   },
 ];
