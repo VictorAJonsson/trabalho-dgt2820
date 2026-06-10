@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuários</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="usuarios.css" />
+  </head>
+  <body>
+    <h1 class="page-title">Usuários de Teste via REST</h1>
+    <p class="page-subtitle">
+      Consumindo dados da API ReqRes utilizando Vue.js
+    </p>
+    <div class="link-container">
+      <a href="https://reqres.in" target="_blank" class="api-link">
+        Fonte dos dados: ReqRes API
+      </a>
+    </div>
+    <div id="usuarios" class="container-fluid main-container">
+      <div class="row justify-content-center">
+        <div
+          class="card usuario-card col-lg-3 col-md-5 col-sm-10 m-3 p-0"
+          v-for="(user,index) in users"
+          :key="index"
+          @click="abrirModal(user)"
+        >
+          <!--
+          As imagens fornecidas pela API ReqRes podem não ser exibidas em alguns navegadores
+          devido a políticas de segurança (CORS/Cross-Origin Resource Policy) do serviço.
+          Os dados dos usuários são carregados normalmente via API REST.
+          -->
+          <img
+            class="card-img-top avatar-img"
+            crossorigin="anonymous"
+            :src="user.avatar"
+            :alt="user.first_name"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ user.first_name }} {{ user.last_name }}
+            </h5>
+
+            <p class="card-text">{{ user.email }}</p>
+          </div>
+        </div>
+      </div>
+      <div v-if="selectedUser" class="modal-overlay" @click="fecharModal">
+        <div class="modal-card" @click.stop>
+          <img
+            :src="selectedUser.avatar"
+            crossorigin="anonymous"
+            class="modal-img"
+            alt=""
+          />
+          <div class="modal-content">
+            <h3>{{ selectedUser.first_name }} {{ selectedUser.last_name }}</h3>
+            <p>{{ selectedUser.email }}</p>
+            <button class="btn btn-dark" @click="fecharModal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="usuarios.js"></script>
+  </body>
+</html>
